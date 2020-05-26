@@ -1991,7 +1991,73 @@ input, select, textarea {
 	form {
 		margin: 0 0 2em 0;
 	}
+		form > :last-child {
+			margin-bottom: 0;
+		}
 
+		form > .fields {
+			display: -moz-flex;
+			display: -webkit-flex;
+			display: -ms-flex;
+			display: flex;
+			-moz-flex-wrap: wrap;
+			-webkit-flex-wrap: wrap;
+			-ms-flex-wrap: wrap;
+			flex-wrap: wrap;
+			width: calc(100% + 3em);
+			margin: -1.5em 0 2em -1.5em;
+		}
+
+			form > .fields > .field {
+				-moz-flex-grow: 0;
+				-webkit-flex-grow: 0;
+				-ms-flex-grow: 0;
+				flex-grow: 0;
+				-moz-flex-shrink: 0;
+				-webkit-flex-shrink: 0;
+				-ms-flex-shrink: 0;
+				flex-shrink: 0;
+				padding: 1.5em 0 0 1.5em;
+				width: calc(100% - 1.5em);
+			}
+
+				form > .fields > .field.half {
+					width: calc(50% - 0.75em);
+				}
+
+				form > .fields > .field.third {
+					width: calc(100%/3 - 0.5em);
+				}
+
+				form > .fields > .field.quarter {
+					width: calc(25% - 0.375em);
+				}
+
+		@media screen and (max-width: 480px) {
+
+			form > .fields {
+				width: calc(100% + 3em);
+				margin: -1.5em 0 2em -1.5em;
+			}
+
+				form > .fields > .field {
+					padding: 1.5em 0 0 1.5em;
+					width: calc(100% - 1.5em);
+				}
+
+					form > .fields > .field.half {
+						width: calc(100% - 1.5em);
+					}
+
+					form > .fields > .field.third {
+						width: calc(100% - 1.5em);
+					}
+
+					form > .fields > .field.quarter {
+						width: calc(100% - 1.5em);
+					}
+
+		}
 	label {
 		display: block;
 		font-size: 0.9em;
@@ -2011,7 +2077,7 @@ input, select, textarea {
 		border-radius: 8px;
 		border: solid 1px;
 		color: inherit;
-		display: block;
+		/*display: block;*/
 		outline: 0;
 		padding: 0 1em;
 		text-decoration: none;
@@ -2999,7 +3065,7 @@ input, select, textarea {
 
 		.spotlight .image {
 			display: inline-block;
-			margin-left: 4em;
+			margin-right: 4em;
 			padding: 0.65em;
 			border-radius: 100%;
 			border: solid 1px;
@@ -3091,6 +3157,14 @@ input, select, textarea {
 
 			#header.alt h1 {
 				font-size: 3.25em;
+			}
+
+			#header.alt h1 a {
+				border: 0;
+				display: block;
+				height: inherit;
+				line-height: inherit;
+				/*text-align:left;*/
 			}
 
 			#header.alt > * {
@@ -3301,14 +3375,16 @@ input, select, textarea {
 						box-shadow: none;
 					}
 
+
 		#nav.alt {
-			position: fixed;
+/*			position: fixed;
 			top: 0;
 			padding: 0.5em 1em;
 			background-color: rgba(247, 247, 247, 0.95);
 			border-top-left-radius: 0;
 			border-top-right-radius: 0;
-			z-index: 10000;
+			z-index: 10000;*/
+			background: transparent;
 		}
 
 			#nav.alt ul li {
@@ -3321,9 +3397,9 @@ input, select, textarea {
 
 		@media screen and (max-width: 736px) {
 
-			#nav {
+			/*#nav {
 				display: none;
-			}
+			}*/
 
 				#nav + #main {
 					padding-top: 0;
