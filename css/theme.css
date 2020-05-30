@@ -38,8 +38,42 @@ body {
 }
 
 .well h1 {
-    color: #ee4444;
-    font-size: 1.3em;
+    color: #666;
+    font-size: 1.0em;
+}
+
+.article .readmore {
+	color: #4183c4;
+}
+
+.article .readmore:hover{
+    text-decoration: none;
+}
+
+.article header{
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1em;
+    margin-left: 5px;
+    line-height: 1em;
+    text-shadow: 0 1px #fff;
+    font-weight: bold;
+    display: block;
+}
+
+.article header a{
+    color: #666;
+}
+
+.article footer a{
+    color: #999;
+    margin-right: 0.5em;
+}
+
+.word-keep{
+    display: inline-block;
+    word-break: keep-all;
 }
 
 .author {
@@ -49,3 +83,4 @@ body {
 .author a {
     color: #ee4444;
 }
+
