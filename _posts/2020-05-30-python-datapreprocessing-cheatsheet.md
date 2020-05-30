@@ -5,8 +5,6 @@ date: 2020-05-30 12:25:06 -0700
 comments: true
 ---
 
-# Python
-
 Python Basics
 ============
 

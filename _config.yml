@@ -1,7 +1,7 @@
 # Jekyll configuration
 
 name: My blog
-description: A jekyll theme
+#description: A jekyll theme
 
 # url is currently only used only for the RSS feed in feed.xml
 url: https://yuand23.github.io
@@ -13,7 +13,7 @@ url: https://yuand23.github.io
 baseurl: /
 
 # These can be '' to hide the Github or Gitlab nav buttons
-github: '/'
+github: 'yuand23/'
 gitlab: ''
 
 # Set this to your UA-# value, or '' to disable the block completely
