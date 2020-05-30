@@ -5,6 +5,8 @@ date: 2020-05-30 12:25:06 -0700
 comments: false
 ---
 
+# Python
+
 Python Basics
 ============
 
@@ -22,8 +24,6 @@ Ipython
 
 1\. ipython下运行linux shell命令
 
-e.g.
-
 ```python
 In [1]: !ls
 ```
@@ -36,8 +36,6 @@ Numpy
 ===============
 
 1\. np.zeros, np.ones
-
-e.g.
 
 ```python
 In [6]: import numpy as np
