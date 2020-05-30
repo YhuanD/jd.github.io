@@ -2,7 +2,7 @@
 layout: post
 title: "Python Data Preprocessing Cheatsheet (持续更新)"
 date: 2020-05-30 12:25:06 -0700
-comments: false
+comments: true
 ---
 
 # Python
