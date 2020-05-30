@@ -8,16 +8,20 @@ comments: false
 Python Basics
 ============
 1. 查找python所在位置：
+
 ```python
 which python
 whereis python
 ```
+
 2. 前面带下划线的变量的意义：**最近的两个输出结果**：分别保存在_(一个下划线)和__(两个下划线)变量中。
 
 Ipython
 ===============
 1. ipython下运行linux shell命令
+
 e.g.
+
 ```python
 In [1]: !ls
 ```
@@ -29,7 +33,9 @@ Pandas
 Numpy
 ===============
 1. np.zeros, np.ones
+
 e.g.
+
 ```python
 In [6]: import numpy as np
 In [10]: np.ones((3,2))                                                                                                   
@@ -44,7 +50,9 @@ array([[0., 0.],
        [0., 0.],
        [0., 0.]])
 ```
+
 2. np.array单个元素element选取
+
 ```python
 # 两种方式等价：
 In [13]: arr = np.zeros((3,2))
@@ -53,7 +61,9 @@ Out[16]: 0.0
 In [17]: arr2d[0,1]                                                                                                       
 Out[17]: 0.0
 ```
+
 3. 生成随机数
+
 ```python
 In [18]: from numpy.random import randn                                                                                   
 
@@ -72,3 +82,4 @@ Out[20]:
 In [21]: randn()                                                                                                          
 Out[21]: -0.18245305471376677
 ```
+
