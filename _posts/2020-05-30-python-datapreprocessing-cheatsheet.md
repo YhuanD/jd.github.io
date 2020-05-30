@@ -7,6 +7,7 @@ comments: false
 
 Python Basics
 ============
+
 1. 查找python所在位置：
 
 ```python
@@ -18,6 +19,7 @@ whereis python
 
 Ipython
 ===============
+
 1. ipython下运行linux shell命令
 
 e.g.
@@ -32,6 +34,7 @@ Pandas
 
 Numpy
 ===============
+
 1. np.zeros, np.ones
 
 e.g.
