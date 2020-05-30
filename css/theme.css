@@ -22,7 +22,7 @@ body {
 }
 
 .sidebar h1 {
-    color: #ee4444;
+    color: #333;
     font-size: 1.3em;
 }
 
@@ -48,7 +48,7 @@ body {
 }
 
 .well h1 {
-    color: #333;
+    color: #fd8406c7;
     font-size: 1.0em;
     margin-top: 0px;
 }
@@ -59,6 +59,7 @@ body {
 
 .article .readmore:hover{
     text-decoration: none;
+    color: #e67ace;
 }
 
 .article header{
