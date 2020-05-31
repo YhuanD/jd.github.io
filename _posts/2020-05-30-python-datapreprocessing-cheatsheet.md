@@ -7,12 +7,12 @@ tags: python cheatsheet
 categories: python
 ---
 
-#  目录
+**目录**
 
 * TOC
 {:toc}
 
-#  Python Basics
+##  Python Basics
 
 1\. 查找python所在位置：
 
@@ -23,7 +23,7 @@ whereis python
 
 2\. 前面带下划线的变量的意义：**最近的两个输出结果**：分别保存在_(一个下划线)和__(两个下划线)变量中。
 
-#  Ipython
+##  Ipython
 
 1\. ipython下运行linux shell命令
 
