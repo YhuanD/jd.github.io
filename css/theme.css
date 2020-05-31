@@ -65,6 +65,12 @@ body {
     background: red;
 }
 
+.well .post_dt {
+    font-weight: light;
+    color: #33333359;
+    font-size: 10px;
+}
+
 .well .post-meta {
     color: #33333361;
 }
@@ -87,6 +93,7 @@ body {
     color: #e67ace;
 }
 
+/* 
 .article header{
     text-decoration: none;
     text-transform: uppercase;
@@ -97,11 +104,14 @@ body {
     font-weight: light;
     display: block;
 }
+ */
 
+/* 
 .article header a{
     color: #33333359;
     font-size: 10px;
 }
+ */
 
 .article footer {
     font-size: .85em;

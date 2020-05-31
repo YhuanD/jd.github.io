@@ -29,10 +29,10 @@ layout: default
 <div class="article">
     <header>
 <!--         <a href="{{ site.baseurl | prepend: site.url  }}/archive/#{{ post.date | date: '%Y-%m-%d' }}"><span class="octicon octicon-calendar"></span>&nbsp;<span>{{ post.date | date: "%Y-%m-%d" }}</span></a> -->
-        <a ><span class="octicon octicon-calendar"></span>&nbsp;<span>{{ post.date | date: "%Y-%m-%d" }}</span></a>
     </header>    
     <div class="well">
         <h1><a href="{{ site.baseurl}}{{ post.url }}">{{ post.title }}</a></h1>
+        <a><span class="post_dt"></span>&nbsp;<span>{{ post.date | date: "%Y-%m-%d" }}</span></a>
 <!-- 
         {% if site.comments and post.comments %}
             {% if site.disqus != '' %}
