@@ -89,8 +89,8 @@ array([[0., 0.],
 2\. np.array单个元素element选取
 
 ```python
-# 两种方式等价：
-In [13]: arr = np.zeros((3,2))
+In [13]: arr2d = np.zeros((3,2))
+# 以下两种方式等价：
 In [16]: arr2d[0][1]
 Out[16]: 0.0
 In [17]: arr2d[0,1]
