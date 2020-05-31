@@ -61,6 +61,7 @@ body {
     height:15px;
     position: absolute;
     background: red;
+    margin-right: 2px;
 }
 
 .well a .post_dt {
