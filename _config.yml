@@ -35,7 +35,7 @@ permalink: /:year/:month/:title
 paginate: 3
 
 highlighter: rouge
-markdown: redcarpet
+markdown: kramdown
 gems: ['jekyll-paginate']
 
 exclude: ['README.md', 'LICENSE']
