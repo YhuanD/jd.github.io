@@ -37,6 +37,36 @@ In [1]: !ls
 
 #  Pandas
 
+1\. 删除DataFrame中某列／行
+
+```
+In [2]: df = pd.DataFrame({"c1":[1,2],"c2":[3,4]})
+In [3]: df                                                                        
+Out[3]:
+   c1  c2
+0   1   3
+1   2   4
+# 按列名删除
+In [4]: df.drop(['c1'],axis=1)
+Out[4]:
+   c2
+0   3
+1   4
+# 按列编号删除 - e.g. 删除第一列
+In [5]: df.drop(df.columns[0],axis=1)
+Out[5]:
+   c2
+0   3
+1   4
+# e.g. 删除**倒数**第一列
+In [6]: df.drop(df.columns[-1],axis=1)                                                                                    
+Out[6]: 
+   c1
+0   1
+1   2
+# inplace删除：加inplace=True
+In [7]: df.drop(df.columns[-1],axis=1,inplace=True)
+```
 
 #  Numpy
 
