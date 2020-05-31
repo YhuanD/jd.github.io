@@ -75,12 +75,11 @@ body {
     color: #33333361;
 }
 
-.well .post-tag {
-    display: inline-block;
-    background: #2ca6cb;
-    color: #fff;
+.well .post-tag a {
+/*     display: inline-block; */
+    color: #d9edf7;
     padding: 2px 5px 0px 5px;
-    border: 1px solid #2ca6cb;
+/*     border: 1px solid #2ca6cb; */
     margin-top: 2px;
 }
 
