@@ -39,9 +39,9 @@ In [1]: !ls
 
 1\. 删除DataFrame中某列／行
 
-```
+```python
 In [2]: df = pd.DataFrame({"c1":[1,2],"c2":[3,4]})
-In [3]: df                                                                        
+In [3]: df
 Out[3]:
    c1  c2
 0   1   3
@@ -59,8 +59,8 @@ Out[5]:
 0   3
 1   4
 # e.g. 删除**倒数**第一列
-In [6]: df.drop(df.columns[-1],axis=1)                                                                                    
-Out[6]: 
+In [6]: df.drop(df.columns[-1],axis=1)                                                                        
+Out[6]:
    c1
 0   1
 1   2
