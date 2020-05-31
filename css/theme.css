@@ -4,7 +4,7 @@ body {
 }
 
 .copyright {
-    color: #ffffff;
+    color: #777;
 }
 
 .footer {
@@ -16,8 +16,8 @@ body {
 }
 
 .sidebar h1 {
-    color: #ee4444;
-    font-size: 1.3em;
+    color: #333;
+    font-size: 1.1em;
 }
 
 .sidebar a {
