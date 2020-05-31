@@ -50,10 +50,30 @@ body {
 .well h1 a::before {
     content: "";
     width: 2px;
-    height:13px;
+    height: 13px;
     position: absolute;
     background: #ff0000c2;
     text-align: center;
+}
+
+.well .post-dt {
+    font-weight: light;
+    color: #33333359;
+    font-size: 12px;
+}
+
+.well .post-tag {
+    color: #33333359;
+    font-size: 12px;
+}
+
+.article .readmore {
+	color: #4183c4;
+}
+
+.article .readmore:hover {
+    text-decoration: none;
+    color: #e67ace;
 }
 
 .author {
