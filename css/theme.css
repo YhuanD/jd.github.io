@@ -47,6 +47,11 @@ body {
     margin-top: 0px;
 }
 
+.well h1:hover {
+    text-decoration: none;
+    color: #e67ace;
+}
+
 .well h1 a::before {
     content: "";
     width: 2px;
