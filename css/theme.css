@@ -76,6 +76,23 @@ body {
     color: #e67ace;
 }
 
+.article footer {
+    font-size: .85em;
+    line-height: 1.6em;
+    padding-top: 1.6em;
+    margin: 0;
+}
+
+.article footer a {
+    color: #999;
+    margin-right: 0.5em;
+}
+
+.word-keep {
+    display: inline-block;
+    word-break: keep-all;
+}
+
 .author {
     color: #ee4444;
 }
