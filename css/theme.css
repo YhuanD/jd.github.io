@@ -61,7 +61,7 @@ body {
     text-align: center;
 }
 
-a .post-dt {
+.well .post-dt {
     font-weight: light;
     color: #33333359;
     font-size: 12px;
