@@ -37,9 +37,23 @@ body {
     margin: 0;
 }
 
+.well {
+    background-color: #f5f5f236;
+}
+
 .well h1 {
-    color: #ee4444;
-    font-size: 1.3em;
+    color: #fd8406c7;
+    font-size: 1.0em;
+    margin-top: 0px;
+}
+
+.well h1 a::before {
+    content: "";
+    width: 2px;
+    height:13px;
+    position: absolute;
+    background: #ff0000c2;
+    text-align: center;
 }
 
 .author {
