@@ -55,13 +55,16 @@ body {
 /*     background-image: linear-gradient(90deg, red 0px, red 5px, transparent 5px); */
 }
 
+.well h1 a {
+    box-shadow:-5px 0px 0 0 red;
+}
+
 .well h1 a::before {
     content: "";
-    width: 3px;
+    width: 2px;
     height:15px;
     position: absolute;
     background: red;
-    margin-right: 2px;
 }
 
 .well a .post_dt {
