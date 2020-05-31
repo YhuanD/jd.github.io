@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Python Data Preprocessing Cheatsheet (持续更新)"
+title: "Python数据预处理Cheatsheet (持续更新)"
 <!-- date: 2020-05-30 12:25:06 -0700 -->
 tags: python cheatsheet
 <!-- comments: true -->
@@ -12,7 +12,7 @@ categories: python
 * TOC
 {:toc}
 
-##  Python Basics
+#  Python Basics
 
 1\. 查找python所在位置：
 
@@ -23,7 +23,7 @@ whereis python
 
 2\. 前面带下划线的变量的意义：**最近的两个输出结果**：分别保存在_(一个下划线)和__(两个下划线)变量中。
 
-##  Ipython
+#  Ipython
 
 1\. ipython下运行linux shell命令
 
@@ -31,12 +31,10 @@ whereis python
 In [1]: !ls
 ```
 
-Pandas
-===============
+#  Pandas
 
 
-Numpy
-===============
+#  Numpy
 
 1\. np.zeros, np.ones
 
