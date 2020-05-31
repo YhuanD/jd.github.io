@@ -59,6 +59,7 @@ body {
     box-shadow:-5px 0px 0 0 red;
 }
 
+/* 
 .well h1 a::before {
     content: "";
     width: 2px;
@@ -66,6 +67,7 @@ body {
     position: absolute;
     background: red;
 }
+ */
 
 .well a .post_dt {
     font-weight: light;
