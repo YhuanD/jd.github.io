@@ -8,11 +8,10 @@
     <meta name="description" content="{{ page.title }}, {% for category in page.categories %}{{ category }},{% endfor %} {% for tag in page.tags %}{{ tag }},{% endfor %} {% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}" />
     <script src="{{ site.baseurl }}/js/jquery.min.js"></script>
     <script src="{{ site.baseurl }}/js/bootstrap.min.js"></script>
-<!--     <link rel="shortcut icon" type="image/x-icon" media="screen" href="{{ '/favicon.ico' | prepend: site.baseurl | prepend: site.url}}" /> -->
     <link href="{{ site.baseurl }}/css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="{{ site.baseurl }}/css/theme.css" rel="stylesheet" type="text/css">
     <link href="{{ site.baseurl }}/css/syntax.css" rel="stylesheet" type="text/css">
-    <link rel="shortcut icon" href="{{ site.baseurl }}/images/bear.ico">
+    <link href="{{ site.baseurl }}/bear.ico" rel="shortcut icon" type="image/x-icon">
 {% include isso-comments.html %}
 </head>
 
@@ -29,8 +28,8 @@
                   <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="{{ site.baseurl }}/"><img src="images/bear.svg" style="height:20px; width:20px;">{{ site.name }}</a>
-              </div>
-              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="{{ site.baseurl }}/">Home</a></li>
                     <li class="active visible-xs-block"><a href="{{ site.baseurl }}/links.html">Links</a></li>
@@ -46,7 +45,7 @@
                     {% endif %
  -->}
                 </ul>
-              </div>
+            </div>
         </div>
     </div>
 </div>
