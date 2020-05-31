@@ -58,7 +58,7 @@ body {
 /* 
 标题左边添加竖线方法1
 .well h1 a {
-    box-shadow:-5px 0px 0 0 red;
+    box-shadow:-2px 0px 0 0 red;
 }
  */
 
@@ -68,6 +68,7 @@ body {
     height:15px;
     position: absolute;
     background: red;
+    text-align: center;
 }
 
 
