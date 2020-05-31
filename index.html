@@ -14,9 +14,7 @@ layout: default
             <p class="author"><a href="{{ site.baseurl }}{{ post.url }}{{ site.isso_suffix }}#isso-thread">Comments</a></p>
             {% endif %}
         {% endif %}
-        <div class="content">
-            {{ post.content }}
-        </div>
+        <p>{% if post.excerpt.size > 32 %}{{ post.excerpt }}{% else %}{{ post.content | strip_html | strip_newlines | truncate: 260 }}{% endif %}</p>
     </div>
 </div>
 {% endfor %}
