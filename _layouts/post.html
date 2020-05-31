@@ -10,7 +10,7 @@
             <div class="well">
                 <h1><a href="{{ site.baseurl}}{{ page.url }}">{{ page.title }}</a></h1>
                 <a class="post-dt">
-                    <span class="octicon octicon-clock"></span> {{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}
+                    <span class="octicon octicon-clock"></span> {{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}&nbsp;&nbsp;
                 </a>
                     {% for tag in page.tags %}
                         <a class="post-tag" href="{{ '/tags' | prepend: site.baseurl | prepend: site.url }}/#{{ tag }}"><span class="octicon octicon-tag"></span>&nbsp;{{ tag }}</a>
