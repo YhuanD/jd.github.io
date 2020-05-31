@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Python数据预处理Cheatsheet (持续更新)"
+title: Python数据预处理Cheatsheet (持续更新)
 <!-- date: 2020-05-30 12:25:06 -0700 -->
 tags: python cheatsheet
 <!-- comments: true -->
@@ -12,7 +12,7 @@ categories: python
 * TOC
 {:toc}
 
-#  Python Basics
+#  Python basics
 
 1\. 查找python所在位置：
 
@@ -40,12 +40,12 @@ In [1]: !ls
 
 ```python
 In [6]: import numpy as np
-In [10]: np.ones((3,2))                                                                                                   
+In [10]: np.ones((3,2))
 Out[10]: 
 array([[1., 1.],
        [1., 1.],
        [1., 1.]])
-In [11]: np.zeros((3,2))                                                                                                  
+In [11]: np.zeros((3,2))
 Out[11]: 
 array([[0., 0.],
        [0., 0.],
@@ -57,18 +57,18 @@ array([[0., 0.],
 ```python
 # 两种方式等价：
 In [13]: arr = np.zeros((3,2))
-In [16]: arr2d[0][1]                                                                                                      
+In [16]: arr2d[0][1]                                                                                            
 Out[16]: 0.0
-In [17]: arr2d[0,1]                                                                                                       
+In [17]: arr2d[0,1]
 Out[17]: 0.0
 ```
 
 3\. 生成随机数
 
 ```python
-In [18]: from numpy.random import randn                                                                                   
-In [19]: data = {i : randn() for i in range(7)}                                                                           
-In [20]: data                                                                                                             
+In [18]: from numpy.random import randn
+In [19]: data = {i : randn() for i in range(7)}
+In [20]: data                                                                           
 Out[20]: 
 {0: 1.153935587569964,
  1: 0.1478806146606029,
@@ -77,7 +77,7 @@ Out[20]:
  4: -1.295237891571599,
  5: 1.5232211455713052,
  6: -0.054794039890991186}
-In [21]: randn()                                                                                                          
+In [21]: randn()
 Out[21]: -0.18245305471376677
 ```
 
