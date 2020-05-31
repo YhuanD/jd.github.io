@@ -57,7 +57,7 @@ array([[0., 0.],
 ```python
 # 两种方式等价：
 In [13]: arr = np.zeros((3,2))
-In [16]: arr2d[0][1]                                                                                            
+In [16]: arr2d[0][1]
 Out[16]: 0.0
 In [17]: arr2d[0,1]
 Out[17]: 0.0
@@ -68,7 +68,7 @@ Out[17]: 0.0
 ```python
 In [18]: from numpy.random import randn
 In [19]: data = {i : randn() for i in range(7)}
-In [20]: data                                                                           
+In [20]: data
 Out[20]: 
 {0: 1.153935587569964,
  1: 0.1478806146606029,
