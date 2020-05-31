@@ -57,11 +57,9 @@ body {
 
 .well h1 a::before {
     content: "";
-    width: 5px;
-    height:50px;
+    width: 3px;
+    height:15px;
     position: absolute;
-    top: 0;
-    left: 0;
     background: red;
 }
 
