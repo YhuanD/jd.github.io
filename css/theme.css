@@ -72,15 +72,17 @@ body {
 }
 
 
-.well a .post-dt {
+.well .post-dt {
     font-weight: light;
     color: #33333359;
     font-size: 10px;
 }
 
+/* 
 .well .post-meta {
     color: #33333361;
 }
+ */
 
 .well .post-tag a {
 /*     display: inline-block; */

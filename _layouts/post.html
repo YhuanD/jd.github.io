@@ -9,7 +9,7 @@
           <div class="article">
             <div class="well">
                 <h1><a href="{{ site.baseurl}}{{ page.url }}">{{ page.title }}</a></h1>
-                <p class="post-meta">
+                <p class="post-dt">
                     <span class="octicon octicon-clock"></span> {{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}
                 </p>
                 <p class="post-tag">
@@ -42,6 +42,7 @@
                 {% endif %}
             </div>
           </div>
+
           <div class="pagination">
               {% if page.next %}
                 <a class="btn btn-default" href="{{ site.baseurl}}{{ page.next.url }}" class="next">Newer Post</a>
