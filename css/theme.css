@@ -78,6 +78,15 @@ body {
     font-size: 12px;
 }
 
+.well .post-dt::after {
+    content: "";
+    width: 1px;
+    height:10px;
+    position: absolute;
+    background: #33333359;
+    text-align: center;
+}
+
 /* 
 .well .post-meta {
     color: #33333361;
@@ -90,15 +99,6 @@ body {
 /*     padding: 2px 5px 0px 5px; */
 /*     border: 1px solid #2ca6cb; */
 /*     margin-top: 2px; */
-}
-
-.well .post-tag::before {
-    content: "";
-    width: 1px;
-    height:10px;
-    position: absolute;
-    background: #33333359;
-    text-align: center;
 }
 
 .article .readmore {
