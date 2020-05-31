@@ -30,6 +30,11 @@ whereis python
 In [1]: !ls
 ```
 
+2\. magic function %: 
+
+- `%paste`: 带格式粘贴一段代码到ipython
+- `%run`: 运行python script. e.g. `%run test.py`
+
 #  Pandas
 
 
