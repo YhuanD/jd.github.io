@@ -78,6 +78,7 @@ body {
     font-size: 12px;
 }
 
+/* 
 .well .post-dt::after {
     content: "";
     width: 1px;
@@ -86,6 +87,7 @@ body {
     background: #33333359;
     text-align: center;
 }
+ */
 
 /* 
 .well .post-meta {
