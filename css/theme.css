@@ -87,9 +87,9 @@ body {
 .well .post-tag {
 /*     display: inline-block; */
     color: #d9edf7;
-    padding: 2px 5px 0px 5px;
+/*     padding: 2px 5px 0px 5px; */
 /*     border: 1px solid #2ca6cb; */
-    margin-top: 2px;
+/*     margin-top: 2px; */
 }
 
 .article .readmore {
