@@ -65,9 +65,9 @@ body {
 .well h1 a::before {
     content: "";
     width: 2px;
-    height:15px;
+    height:13px;
     position: absolute;
-    background: red;
+    background: #ff0000c2;
     text-align: center;
 }
 
