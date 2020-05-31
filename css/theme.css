@@ -75,7 +75,7 @@ body {
 .well .post-dt {
     font-weight: light;
     color: #33333359;
-    font-size: 10px;
+    font-size: 12px;
 }
 
 /* 
@@ -84,7 +84,7 @@ body {
 }
  */
 
-.well .post-tag a {
+.well .post-tag {
 /*     display: inline-block; */
     color: #d9edf7;
     padding: 2px 5px 0px 5px;

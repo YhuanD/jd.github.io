@@ -31,10 +31,10 @@ layout: default
 <!--         <a href="{{ site.baseurl | prepend: site.url  }}/archive/#{{ post.date | date: '%Y-%m-%d' }}"><span class="octicon octicon-calendar"></span>&nbsp;<span>{{ post.date | date: "%Y-%m-%d" }}</span></a> -->
     </header>    
     <div class="well">
-        <h1><a href="{{ site.baseurl}}{{ post.url }}"></span>&nbsp;&nbsp;<span>{{   post.title }}</a></h1>
-        <a class="post-dt"></span>&nbsp;<span><span>{{ post.date | date: "%Y-%m-%d" }}</span></a>
+        <h1><a href="{{ site.baseurl}}{{ post.url }}">&nbsp;&nbsp;{{post.title }}</a></h1>
+        <a class="post-dt"><span>&nbsp;{{ post.date | date: "%Y-%m-%d" }}</span></a>
         {% for tag in post.tags %}
-        <a class="post-tag" ><span class="octicon octicon-tag"></span>&nbsp;{{ tag }}</a>
+        <a class="post-tag" >&nbsp;{{ tag }}</a>
         {% endfor %}
 <!-- 
         {% if site.comments and post.comments %}
