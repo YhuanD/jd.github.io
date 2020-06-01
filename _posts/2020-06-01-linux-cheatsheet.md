@@ -12,3 +12,4 @@ categories: linux
 {:toc}
 
 1\. 查看磁盘空间：`df -h`：
+2\. 查看当前文件夹中文件磁盘空间占用：`du -sh *`
