@@ -68,6 +68,17 @@ Out[6]:
 In [7]: df.drop(df.columns[-1],axis=1,inplace=True)
 ```
 
+2\. 用range构造df
+
+```
+In [19]: df = pd.DataFrame({'col1':['a','b'],'data1':range(2)})
+In [20]: df
+Out[20]:
+  col1  data1
+0    a      0
+1    b      1
+```
+
 #  Numpy
 
 1\. np.zeros, np.ones
@@ -113,5 +124,17 @@ Out[20]:
  6: -0.054794039890991186}
 In [21]: randn()
 Out[21]: -0.18245305471376677
+```
+
+# 作图
+
+1\. 加载图片并展示
+
+```python
+import matplotlib.pyplot as plt
+# 读取图片
+img = plt.imread('/filepath/myimage.jpg')
+# 展示图片
+plt.imshow(img)
 ```
 
