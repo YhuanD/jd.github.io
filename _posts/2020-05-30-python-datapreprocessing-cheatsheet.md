@@ -58,8 +58,8 @@ Out[5]:
    c2
 0   3
 1   4
-# e.g. 删除**倒数**第一列
-In [6]: df.drop(df.columns[-1],axis=1)                                                                        
+# e.g. 删除倒数第一列
+In [6]: df.drop(df.columns[-1],axis=1)
 Out[6]:
    c1
 0   1
