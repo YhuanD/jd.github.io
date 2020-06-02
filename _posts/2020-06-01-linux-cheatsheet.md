@@ -85,7 +85,7 @@ awk -F',' 'NR==FNR{a[$2]++}NR!=FNR&&++b[$2]==1{print $2,a[$2]}' data.csv data.cs
 8\. join以第（一）个文件的第（二）列和第（二）个文件的第（三）列做匹配字段： 
 
 ```sh
-join -t ',' -1 2 -2 3 file1.txt file2.txt` 
+join -t ',' -1 2 -2 3 file1.txt file2.txt
 #（-t ','逗号为分隔符；默认为空白字符。）
 ```
 
@@ -99,7 +99,7 @@ awk -F',' 'NR==FNR{a[$1]=$2;}NR!=FNR{print $0,a[$1]}'  OFS=',' file2.txt file1.t
 
 # pip
 
-1\. 为指定版本python安装包： `python37 -m pip install XXX`
+1\. 为指定版本python安装包： `python37 -m pip install xxx`
 
 2\. 查看已安装的模块： `pip list`
 
