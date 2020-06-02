@@ -70,13 +70,44 @@ In [7]: df.drop(df.columns[-1],axis=1,inplace=True)
 
 2\. 用range构造df
 
-```
+```python
 In [19]: df = pd.DataFrame({'col1':['a','b'],'data1':range(2)})
 In [20]: df
 Out[20]:
   col1  data1
 0    a      0
 1    b      1
+```
+
+3\. 替换dataframe内容
+
+```python
+# 例1
+data.replace(';', ',', inplace=True)
+# 例2： 正则替换
+data = data.replace(to_replace=r'\n|\r|\?|\t', value=' ', regex=True)
+```
+
+4\. 读入文件
+
+```python
+pd.read_csv('上市公司名单.csv', sep=',', header=0) 
+# 注：header=0，表示第一行为标题行
+```
+
+5\. 两个dataframe取补集
+
+```python
+# df中去掉df1
+df.append(df1).drop_duplicates(keep=False).copy()
+# 注：如果没有keep=False就是简单的去重
+```
+
+6\. dataframe增加一行数据
+
+```python
+# e.g. 
+df.append([[1,2,3]])
 ```
 
 #  Numpy
