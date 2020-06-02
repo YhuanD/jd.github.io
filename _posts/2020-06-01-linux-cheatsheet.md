@@ -72,14 +72,23 @@ e.g. sort -t "," -k 2n,2 test.csv > testout.csv
 ```
 6\. sed查找替换： `sed -i s/\"//g testout.csv`
 
-7\. awk统计文件第（二）列频次（逗号分割）： `awk -F',' 'NR==FNR{a[$2]++}NR!=FNR&&++b[$2]==1{print $2,a[$2]}' data.csv data.csv`
+7\. awk统计文件第（二）列频次（逗号分割）： 
 
-8\. join以第（一）个文件的第（二）列和第（二）个文件的第（三）列做匹配字段： `join -t ',' -1 2 -2 3 file1.txt file2.txt` （-t ','逗号为分隔符；默认为空白字符。）
+```sh
+awk -F',' 'NR==FNR{a[$2]++}NR!=FNR&&++b[$2]==1{print $2,a[$2]}' data.csv data.csv
+```
+
+8\. join以第（一）个文件的第（二）列和第（二）个文件的第（三）列做匹配字段： 
+
+```sh
+join -t ',' -1 2 -2 3 file1.txt file2.txt` 
+#（-t ','逗号为分隔符；默认为空白字符。）
+```
 
 9\. left join
 
 ```sh
-file1.txt left join file2.txt:
+# file1.txt left join file2.txt:
 awk -F',' 'NR==FNR{a[$1]=$2;}NR!=FNR{print $0,a[$1]}'  OFS=',' file2.txt file1.txt> test.out
 # 注：OFS为指定输出分隔符 
 ```

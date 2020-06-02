@@ -15,7 +15,7 @@ categories: python
 
 1\. 查找python所在位置：
 
-```python
+```sh
 which python
 whereis python
 ```
