@@ -57,7 +57,11 @@ sudo dpkg --list | grep nvidia-*
 * 打印file中的第4行： `sed -n 4p filename`
 * 打印file中的4-8行： `sed -n 4,8p filename`
 
-4\. 指定分隔符（"|"）选取第几列： awk -F"|" '{print $1"|"$2"|"$4"|"}' yourfile　>newfile
+4\. 指定分隔符（"\|"）选取第几列： 
+
+```sh
+awk -F"|" '{print $1"|"$2"|"$4"|"}' yourfile　> newfile
+```
 
 5\. 按指定列排序：
 
