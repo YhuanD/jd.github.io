@@ -21,10 +21,16 @@ categories: linux
 
 4\. 显卡
 
-* 查看显卡信息： lspci | grep -i vga
-* nvidia查看显卡型号： lspci | grep -i nvidia
-* 查看nvidia显卡型号： lspci | grep -i nvidia
-* 查看驱动版本： sudo dpkg --list | grep nvidia-*
+```sh
+# 查看显卡信息： 
+lspci | grep -i vga
+# nvidia查看显卡型号： 
+lspci | grep -i nvidia
+# 查看nvidia显卡型号： 
+lspci | grep -i nvidia
+# 查看驱动版本： 
+sudo dpkg --list | grep nvidia-*
+```
 
 5\. Nvidia自带一个命令行工具可以查看显存的使用情况： `nvidia-smi`
 
@@ -55,14 +61,14 @@ categories: linux
 
 5\. 按指定列排序：
 
-```
-    sort -t “,” -k 1n,1 -k 3rn,3 file.txt
-	1.-t 指定文本分隔符
-	2.-k 指定排序列
-	3.-n 按数字进行排序
-	4.-r 翻转排序结果
-	上面的例子为按第一列正排序，按第三列反排序；
-	e.g. sort -t "," -k 2n,2 test.csv > testout.csv
+```sh
+sort -t "," -k 1n,1 -k 3rn,3 file.txt
+  1.-t 指定文本分隔符
+  2.-k 指定排序列
+  3.-n 按数字进行排序
+  4.-r 翻转排序结果
+#上面的例子为按第一列正排序，按第三列反排序；
+e.g. sort -t "," -k 2n,2 test.csv > testout.csv
 ```
 6\. sed查找替换： `sed -i s/\"//g testout.csv`
 
@@ -72,10 +78,10 @@ categories: linux
 
 9\. left join
 
-```
+```sh
 file1.txt left join file2.txt:
 awk -F',' 'NR==FNR{a[$1]=$2;}NR!=FNR{print $0,a[$1]}'  OFS=',' file2.txt file1.txt> test.out
-注：OFS为指定输出分隔符 
+# 注：OFS为指定输出分隔符 
 ```
 
 # pip
