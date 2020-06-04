@@ -11,7 +11,8 @@ categories: python
 * TOC
 {:toc}
 
-#  Python basics
+Python basics
+==============
 
 1\. 查找python所在位置：
 
@@ -44,7 +45,7 @@ whereis python
 >>> re.split(r'[a-z]+',"5se3dr23")
 ['5', '3', '23']
 # 加"()"保留拆分字符串，对比如下
->>> re.split(r'(dr)',"ddr23")     
+>>> re.split(r'(dr)',"ddr23")
 ['d', 'dr', '23']
 >>> re.split(r'dr',"ddr23")  
 ['d', '23']
@@ -88,7 +89,8 @@ whereis python
 '20200604'
 ```
 
-#  Ipython
+Ipython
+==============
 
 1\. ipython下运行linux shell命令
 
@@ -101,7 +103,8 @@ In [1]: !ls
 - `%paste`: 带格式粘贴一段代码到ipython
 - `%run`: 运行python script. e.g. `%run test.py`
 
-#  Pandas
+Pandas
+==============
 
 1\. 删除DataFrame中某列／行
 
@@ -342,7 +345,8 @@ z    c    f
 1    b   bb     2
 ```
 
-#  Numpy
+Numpy
+==============
 
 1\. np.zeros, np.ones
 
@@ -389,7 +393,8 @@ In [21]: randn()
 Out[21]: -0.18245305471376677
 ```
 
-# 作图
+作图
+==============
 
 1\. 加载图片并展示
 

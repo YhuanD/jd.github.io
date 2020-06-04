@@ -11,7 +11,8 @@ categories: linux
 * TOC
 {:toc}
 
-# Ubuntu basics
+Ubuntu basics
+==============
 
 1\. 查看磁盘空间： `df -h`
 
@@ -44,7 +45,8 @@ sudo dpkg --list | grep nvidia-*
 
 11\. 解压缩bz2文件： `bunzip2 FileName.bz2`
 
-# Bash
+Bash
+==============
 
 1\. 去除文件中的重复行： `cat data1.txt | sort | uniq > out.txt`
 
@@ -95,7 +97,8 @@ awk -F',' 'NR==FNR{a[$1]=$2;}NR!=FNR{print $0,a[$1]}'  OFS=',' file2.txt file1.t
 # 注：OFS为指定输出分隔符 
 ```
 
-# pip
+pip
+==============
 
 1\. 为指定版本python安装包： `python37 -m pip install xxx`
 
@@ -103,13 +106,15 @@ awk -F',' 'NR==FNR{a[$1]=$2;}NR!=FNR{print $0,a[$1]}'  OFS=',' file2.txt file1.t
 
 3\. 升级某个Python包： `pip install --upgrade xxx`
 
-# Vi
+Vi
+==============
 
 1\. 清空文件： `:%d`
 
 2\. 删除空行： `:g/^$/d`
 
-# Conda virtual env
+Conda virtual env
+==============
 
 1\. 查看已安装的虚拟环境： `conda env list`
 
@@ -117,7 +122,8 @@ awk -F',' 'NR==FNR{a[$1]=$2;}NR!=FNR{print $0,a[$1]}'  OFS=',' file2.txt file1.t
 
 3\. 进入虚拟环境： `source activate env_name`
 
-# Docker
+Docker
+==============
 
 1\. 查看docker信息： `docker inspect container_name`
 
