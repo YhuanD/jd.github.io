@@ -24,8 +24,6 @@ categories: linux
 ```sh
 # 查看显卡信息： 
 lspci | grep -i vga
-# nvidia查看显卡型号： 
-lspci | grep -i nvidia
 # 查看nvidia显卡型号： 
 lspci | grep -i nvidia
 # 查看驱动版本： 

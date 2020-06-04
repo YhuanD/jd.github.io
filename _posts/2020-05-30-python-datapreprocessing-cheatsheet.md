@@ -22,6 +22,51 @@ whereis python
 
 2\. 前面带下划线的变量的意义：**最近的两个输出结果**：分别保存在\_(一个下划线)和__(两个下划线)变量中。
 
+3\. 字符串拆分
+
+``` python
+>>> line = 'aaa,bbb;ccc,ddd'
+# 按照某个字符（串）拆分
+>>> line.split(',')
+['aaa', 'bbb;ccc', 'ddd']
+>>> line.split('bb')
+['aaa,', 'b;ccc,ddd']
+## 使用正则拆分
+# e.g. 按","或";"拆分，以下两种方法都可以
+>>> re.split(r';|,',line)
+['aaa', 'bbb', 'ccc', 'ddd']
+>>> re.split(r'[;,]',line)
+['aaa', 'bbb', 'ccc', 'ddd']
+# e.g. 按","或"bb"拆分
+>>> re.split(r',|bb',line)
+['aaa', '', 'b;ccc', 'ddd']
+# e.g. 按一个或多个英文字母拆分
+>>> re.split(r'[a-z]+',"5se3dr23")
+['5', '3', '23']
+# 加"()"保留拆分字符串，对比如下
+>>> re.split(r'(dr)',"ddr23")     
+['d', 'dr', '23']
+>>> re.split(r'dr',"ddr23")  
+['d', '23']
+```
+
+4\. re.search, re.findall(), re.match(), .find()
+
+```python
+>>> re.search(r'a|b','bba')
+<_sre.SRE_Match object; span=(0, 1), match='b'>
+>>> re.search(r'a|b','bba').group(0) 
+'b'
+>>> re.findall(r'a|b','bba')
+['b', 'b', 'a']
+>>> re.match(r'.*bb(\d+)a',"中文bb23a").group(1)
+'23'
+>>> "aa34bb".find('b') 
+4
+>>> "aa34bb".find('34')
+2
+```
+
 #  Ipython
 
 1\. ipython下运行linux shell命令
