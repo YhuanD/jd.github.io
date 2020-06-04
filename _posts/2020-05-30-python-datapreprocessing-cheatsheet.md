@@ -53,7 +53,8 @@ whereis python
 4\. re.search, re.findall(), re.match(), .find()
 
 ```python
->>> re.search(r'a|b','bba')
+# re.search()
+re.search(r'a|b','bba')
 <_sre.SRE_Match object; span=(0, 1), match='b'>
 >>> re.search(r'a|b','bba').group(0) 
 'b'
