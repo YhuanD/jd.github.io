@@ -3,7 +3,7 @@ layout: default
 ---
 
 {% for post in paginator.posts %}
-{% if post.date > 20190131 %}
+{% if post.date != 2019-12-31 %}
 <div class="article">
     <div class="well">
         <h1><a href="{{ site.baseurl}}{{ post.url }}">&nbsp;&nbsp;{{ post.title }}</a></h1>
