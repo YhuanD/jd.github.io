@@ -8,7 +8,7 @@
         <div class="col-md-9">
           <div class="article">
             <div class="well">
-                
+                <div>
                 <h1><a href="{{ site.baseurl}}{{ page.url }}">&nbsp;&nbsp;{{ page.title }}</a></h1>
                 <p>
                 {% assign year = page.date | date: '%Y' %}  
@@ -21,6 +21,7 @@
                         <a class="post-tag pull-right" href="{{ '/tags' | prepend: site.baseurl | prepend: site.url }}/#{{ tag }}"><span class="octicon octicon-tag"></span><span>{{ tag }}&nbsp;&nbsp;</span></a>
                     {% endfor %}  
                 </p>  
+                </div>>
                            
                 <!-- <a class="post-tag">
                     <span>{% for cat in page.categories %}<a href="{{ '/category' | prepend: site.baseurl | prepend: site.url }}/#{{ cat }}"><span class="octicon octicon-list-unordered"></span>&nbsp;{{ cat }}</a>{% endfor %}</span>
