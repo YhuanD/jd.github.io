@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Python数据预处理Cheatsheet (持续更新)
+title: Python数据预处理cheatsheet (持续更新)
 <!-- date: 2020-05-30 12:25:06 -0700 -->
 tags: python cheatsheet
 <!-- comments: true -->
