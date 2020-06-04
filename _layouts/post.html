@@ -10,7 +10,7 @@
             <div class="well">
                 <h1><a href="{{ site.baseurl}}{{ page.url }}">&nbsp;&nbsp;{{ page.title }}</a></h1>
                 <p>
-                {% assign year = post.date |date:'%Y' %}  
+                {% assign year = page.date | date: '%Y' %}  
                 {% if year != '2000' %}
                 <a class="post-dt">
                     <span>&nbsp;&nbsp;{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</span>
