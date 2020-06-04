@@ -16,7 +16,7 @@
                     <span>&nbsp;&nbsp;{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</span>
                 </a>
                 {% else %}
-                <a>{{site.date}}</a>
+                <a>{{ site.time | date: '%b %-d, %Y' }}</a>
                 {% endif %}
                     {% for tag in page.tags %}
                         <a class="post-tag pull-right" href="{{ '/tags' | prepend: site.baseurl | prepend: site.url }}/#{{ tag }}"><span class="octicon octicon-tag"></span><span>{{ tag }}&nbsp;&nbsp;</span></a>
