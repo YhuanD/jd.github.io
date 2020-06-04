@@ -54,18 +54,38 @@ whereis python
 
 ```python
 # re.search()
-re.search(r'a|b','bba')
+>>> re.search(r'a|b','bba')
 <_sre.SRE_Match object; span=(0, 1), match='b'>
 >>> re.search(r'a|b','bba').group(0) 
 'b'
+# re.findall()
 >>> re.findall(r'a|b','bba')
 ['b', 'b', 'a']
+# re.match()
 >>> re.match(r'.*bb(\d+)a',"中文bb23a").group(1)
 '23'
+# a_string.find()
 >>> "aa34bb".find('b') 
 4
 >>> "aa34bb".find('34')
 2
+```
+
+5\. 字符串替换re.sub
+
+```python
+>>> re.sub(',|;','','aa,bb;cc')
+'aabbcc'
+>>> re.sub(',|bb','','aa,bb;cc')
+'aa;c'
+```
+
+6\. 日期
+
+```python
+>>> import datetime
+>>> datetime.date.today().strftime("%Y%m%d")
+'20200604'
 ```
 
 #  Ipython
@@ -134,11 +154,14 @@ data.replace(';', ',', inplace=True)
 data = data.replace(to_replace=r'\n|\r|\?|\t', value=' ', regex=True)
 ```
 
-4\. 读入文件
+4\. 读入/输出文件
 
 ```python
-pd.read_csv('上市公司名单.csv', sep=',', header=0) 
+# 读入文件
+pd.read_csv('filename', sep=',', header=0) 
 # 注：header=0，表示第一行为标题行
+# 将df保存到文件
+df.to_csv('filename', index=False, sep=';')
 ```
 
 5\. 两个dataframe取补集
@@ -154,6 +177,169 @@ df.append(df1).drop_duplicates(keep=False).copy()
 ```python
 # e.g. 
 df.append([[1,2,3]])
+```
+
+7\. dataframe部分选取
+
+```python
+>>> df = pd.DataFrame({'col1':['ab','bc','cd','de'],'col2':[1,2,3,4]})
+>>> df
+  col1  col2
+0   ab     1
+1   bc     2
+2   cd     3
+3   de     4
+# 选取col1中包含'a'或'b'的行
+>>> df[df.col1.str.contains('a|b')]
+  col1  col2
+0   ab     1
+1   bc     2
+# 选取col1中包含'a'或'b'并且不包含'c'的行
+>>> df[df.col1.str.contains('a|b') & ~df.col1.str.contains('c')]
+  col1  col2
+0   ab     1
+```
+
+8\. 填充np.nan处： .fillna() ## inplace=True可用
+
+```python
+>>> df = pd.DataFrame({'col1':['a',np.nan,'c'],'col2':[1,2,np.nan]})
+>>> df
+  col1  col2
+0    a   1.0
+1  NaN   2.0
+2    c   NaN
+# 全局fill
+>>> df.fillna(3)
+  col1  col2
+0    a   1.0
+1    3   2.0
+2    c   3.0
+# inplace
+>>> df.fillna(3,inplace=True)
+>>> df
+  col1  col2
+0    a   1.0
+1    3   2.0
+2    c   3.0
+# 某一列fill
+>>> df.col2.fillna(3)
+0    1.0
+1    2.0
+2    3.0
+# 使用df1或df中的另一列fill df中的某一列
+>>> df1 = pd.DataFrame({'col3':[4,5,6]})
+>>> df1
+   col3
+0     4
+1     5
+2     6
+>>> df.col2.fillna(df1.col3)
+0    1.0
+1    2.0
+2    6.0
+```
+
+9\. 列/行重命名rename ## inplace=True可用
+
+```python
+>>> df = pd.DataFrame({'col1':['a','b','c'],'col2':['d','e','f']})
+>>> df
+  col1 col2
+0    a    d
+1    b    e
+2    c    f
+>>> df.rename(columns={'col1':'c1'})  
+  c1 col2
+0  a    d
+1  b    e
+2  c    f
+# 行重命名
+>>> df.rename(index={0:'x',1:'y',2:'z'})
+  col1 col2
+x    a    d
+y    b    e
+z    c    f
+```
+
+10\. 按列排序 ## inplace=True可用
+
+```python
+>>> df = pd.DataFrame({'col1':['b','a','a','c'],'col2':[1,3,2,4]})
+>>> df
+  col1  col2
+0    b     1
+1    a     3
+2    a     2
+3    c     4
+>>> df.sort_values(by='col1') # 或 df.sort_values(by=['col1'])
+  col1  col2
+1    a     3
+2    a     2
+0    b     1
+3    c     4
+# 反向排序
+>>> df.sort_values(by='col1', ascending=False)
+  col1  col2
+3    c     4
+0    b     1
+1    a     3
+2    a     2
+# 按两列排序
+>>> df.sort_values(by=['col1','col2'])
+  col1  col2
+2    a     2
+1    a     3
+0    b     1
+3    c     4
+```
+
+11\. 删除含np.nan的行/列： .dropna() ## inplace=True可用
+
+```python
+>>> df = pd.DataFrame({'col1':['a',np.nan,'c'],'col2':[1,2,np.nan],'col3':[4,5,6]})
+>>> df
+  col1  col2  col3
+0    a   1.0     4
+1  NaN   2.0     5
+2    c   NaN     6
+# drop含np.nan的行
+>>> df.dropna()
+  col1  col2  col3
+0    a   1.0     4
+# drop含np.nan的列
+>>> df.dropna(axis='columns')
+   col3
+0     4
+1     5
+2     6
+# drop都为np.nan的行
+>>> df = pd.DataFrame({'col1':['a',np.nan,'c'],'col2':[1,np.nan,np.nan]})
+>>> df
+  col1  col2
+0    a   1.0
+1  NaN   NaN
+2    c   NaN
+>>> df.dropna(how='all')
+  col1  col2
+0    a   1.0
+2    c   NaN
+```
+
+12\. 更改某列位置
+
+```python
+>>> df = pd.DataFrame({'col1':['a','b'],'col2':[1,2],'col3':['aa','bb']})           
+>>> df
+  col1  col2 col3
+0    a     1   aa
+1    b     2   bb
+# 将col3换到第二列（列index=1）## 直接在df原位替换，不用重新赋值给df
+>>> df.insert(1,'col3',df.pop('col3'))
+>>> df
+  col1 col3  col2
+0    a   aa     1
+1    b   bb     2
 ```
 
 #  Numpy
