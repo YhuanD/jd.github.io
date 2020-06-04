@@ -16,14 +16,10 @@
                     <span>&nbsp;&nbsp;{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</span>
                 </a>
                 {% else %}
-                <a>
-                    <span>
-                        <script language="javascript">
-                            var now=new Date();
-                            document.write(now.year()+"年"+now.month()+"月"+now.day()+“日”bai);
-                        </script>
-                    </span>
-                </a>
+                <script language="javascript">
+                    var now=new Date();
+                    document.write(now.year()+"年"+now.month()+"月"+now.day()+“日”bai);
+                </script>
                 {% endif %}
                     {% for tag in page.tags %}
                         <a class="post-tag pull-right" href="{{ '/tags' | prepend: site.baseurl | prepend: site.url }}/#{{ tag }}"><span class="octicon octicon-tag"></span><span>{{ tag }}&nbsp;&nbsp;</span></a>
