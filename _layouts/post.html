@@ -10,9 +10,12 @@
             <div class="well">
                 <h1><a href="{{ site.baseurl}}{{ page.url }}">&nbsp;&nbsp;{{ page.title }}</a></h1>
                 <p>
+                {% assign year = post.date |date:'%Y' %}  
+                {% if year != '2000' %}
                 <a class="post-dt">
                     <span>&nbsp;&nbsp;{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</span>
                 </a>
+                {% endif %}
                     {% for tag in page.tags %}
                         <a class="post-tag pull-right" href="{{ '/tags' | prepend: site.baseurl | prepend: site.url }}/#{{ tag }}"><span class="octicon octicon-tag"></span><span>{{ tag }}&nbsp;&nbsp;<span></a>
                     {% endfor %}  
