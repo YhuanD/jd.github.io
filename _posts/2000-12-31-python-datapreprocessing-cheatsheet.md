@@ -51,7 +51,7 @@ whereis python
 ['d', '23']
 ```
 
-4\. re.search, re.findall(), re.match(), .find()
+4\. 匹配搜索： re.search(), re.findall(), re.match(), .find()
 
 ```python
 # re.search()
@@ -72,7 +72,7 @@ whereis python
 2
 ```
 
-5\. 字符串替换re.sub
+5\. 字符串替换re.sub()
 
 ```python
 >>> re.sub(',|;','','aa,bb;cc')

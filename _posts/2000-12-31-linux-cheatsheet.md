@@ -33,9 +33,9 @@ sudo dpkg --list | grep nvidia-*
 
 5\. Nvidia自带一个命令行工具可以查看显存的使用情况： `nvidia-smi`
 
-6\. 查看目前所用的cuda版本： cat /usr/local/cuda/version.txt
+6\. 查看目前所用的cuda版本： `cat /usr/local/cuda/version.txt`
 
-7\. 下载文件到指定目录下： wget -P 指定目录 下载链接
+7\. 下载文件到指定目录下： `wget -P 指定目录 下载链接`
 
 8\. 查看cpu信息： `lscpu`
 
@@ -50,7 +50,7 @@ Bash
 
 1\. 去除文件中的重复行： `cat data1.txt | sort | uniq > out.txt`
 
-2\. 将测试目录test1下所有内容完全复制到test2： ·cp -r test1/ test2 ·
+2\. 将测试目录test1下所有内容完全复制到test2： `cp -r test1/ test2`
 
 3\. sed 打印文件中某行：
 
