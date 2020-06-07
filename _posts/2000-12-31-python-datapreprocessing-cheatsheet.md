@@ -94,7 +94,7 @@ whereis python
 ```python
 In [56]: lst = ['a','b','c']
 In [57]: v1,v2,v3 = lst
-In [58]: v1                                         
+In [58]: v1
 Out[58]: 'a'
 ```
 
@@ -628,9 +628,9 @@ Out[115]:
   col1  data1
 0    a      0
 1    b      1
-In [116]: list(df)                              
+In [116]: list(df)
 Out[116]: ['col1', 'data1']
-In [117]: df.columns                              
+In [117]: df.columns
 Out[117]: Index(['col1', 'data1'], dtype='object')
 ``` 
 
@@ -1165,7 +1165,7 @@ array([[8.54, 3.21],
        [9.01, 9.18],
        [7.18, 6.85]])
 # 将a展平后最大值为9.18，索引为3
-In [837]: np.argmax(a)                      
+In [837]: np.argmax(a)
 Out[837]: 3
 # 按行查看
 In [838]: np.argmax(a,axis=0)
