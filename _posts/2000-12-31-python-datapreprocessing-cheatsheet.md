@@ -286,6 +286,27 @@ In [852]: print('Hello, {}!' .format('world'))
 Hello, world!
 ```
 
+25\. 从两个list构造字典
+
+```python
+>>> lst1 = list('abc')
+>>> lst2 = list(range(3))
+>>> lst1
+['a', 'b', 'c']
+>>> lst2
+[0, 1, 2]
+>>> dict(zip(lst1,lst2))
+{'a': 0, 'b': 1, 'c': 2}
+```
+
+26\. re只保留字符串中的中文
+
+```python
+>>> p = re.compile(r'[^\u4e00-\u9fa5]', re.S) # re.S表示包括换行符 
+>>> re.sub(p,'',"sd中文df")
+'中文'
+```
+
 Ipython
 ==============
 
@@ -308,6 +329,19 @@ In [1]: !ls
 ```python
 from pprint import pprint
 pprint(j)
+# 对于dictionary类型，pprint会自动排序，为避免排序，可使用OrderedDict
+>>> from collections import OrderedDict
+>>> lst1 = list('abcdefg')
+>>> lst2 = list(range(7))
+>>> dic = OrderedDict(zip(lst1,lst2))
+>>> pprint(dic)
+OrderedDict([('a', 0),
+             ('b', 1),
+             ('c', 2),
+             ('d', 3),
+             ('e', 4),
+             ('f', 5),
+             ('g', 6)])
 ```
 
 
