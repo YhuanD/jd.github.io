@@ -307,6 +307,15 @@ Hello, world!
 '中文'
 ```
 
+27\. string中substring出现次数
+
+```python
+>>> "aaabc".count("a")
+3
+>>> "aaabc".count("aa")
+1
+```
+
 Ipython
 ==============
 
@@ -349,7 +358,7 @@ OrderedDict([('a', 0),
 Pandas
 ==============
 
-1\. 删除DataFrame中某列／行：（df.drop()或del df['col_name']，注：不能用del df.col_name）
+1\. 删除DataFrame中某列／行：（df.drop()或del df['col_name']，注：不能用del df.col_name，inplace=True可用）
 
 ```python
 In [2]: df = pd.DataFrame({"c1":[1,2],"c2":[3,4]})
@@ -1037,6 +1046,23 @@ Out[851]:
   col1
 0    a
 1    d
+```
+
+32\. 按字符串拼接两列内容
+
+```python
+>>> df = pd.DataFrame({'col1':list('abc'),'col2':range(3)})
+>>> df
+  col1  col2
+0    a     0
+1    b     1
+2    c     2
+>>> df['col3'] = df['col1'].astype(str) + df['col2'].astype(str)
+>>> df
+  col1  col2 col3
+0    a     0   a0
+1    b     1   b1
+2    c     2   c2
 ```
 
 Numpy
