@@ -45,6 +45,8 @@ sudo dpkg --list | grep nvidia-*
 
 11\. 解压缩bz2文件： `bunzip2 FileName.bz2`
 
+12\. 查看文件编码格式： `file file_name`
+
 Bash
 ==============
 

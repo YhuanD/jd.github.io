@@ -1065,6 +1065,25 @@ Out[851]:
 2    c     2   c2
 ```
 
+33\. apply多返回值函数，赋值给df两列
+
+```python
+>>> df = pd.DataFrame({'c1':['ab','cde'],'c2':range(2)})
+>>> df
+    c1  c2
+0   ab   0
+1  cde   1
+# 定义一个函数，返回两列，第一列将c1结尾加A，第二列返回c1字符串长度
+>>> def chg(content):
+...     return pd.Series((content+'A',len(content))) 
+... 
+>>> df[['c3','c4']] = df['c1'].apply(chg)
+>>> df
+    c1  c2    c3  c4
+0   ab   0   abA   2
+1  cde   1  cdeA   3
+```
+
 Numpy
 ==============
 
