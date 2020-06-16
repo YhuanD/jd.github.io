@@ -316,6 +316,14 @@ Hello, world!
 1
 ```
 
+28\. input()
+
+```python
+>>> print("hello! " + input())       
+hi
+hello! hi
+```
+
 Ipython
 ==============
 
