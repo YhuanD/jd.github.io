@@ -47,6 +47,8 @@ sudo dpkg --list | grep nvidia-*
 
 12\. 查看文件编码格式： `file file_name`
 
+13\. nohup后台运行程序： `nohup python myscript.py &> out.log &`， 查看python进程： `ps aux|grep python` ，停止进程： `kill -num`
+
 Bash
 ==============
 

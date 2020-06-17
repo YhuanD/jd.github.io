@@ -1092,6 +1092,18 @@ Out[851]:
 1  cde   1  cdeA   3
 ```
 
+34\. 将列表作为某列
+
+```python
+>>> df = pd.DataFrame()
+>>> df['c1'] = list('abc')
+>>> df
+  c1
+0  a
+1  b
+2  c
+```
+
 Numpy
 ==============
 
