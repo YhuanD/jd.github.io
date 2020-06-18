@@ -324,6 +324,20 @@ hi
 hello! hi
 ```
 
+29\. 判断是否是某个类型
+
+```python
+>>> isinstance((1,2),tuple) 
+True
+```
+
+30\. 对list使用element-wise函数
+
+```python
+# 例：去掉list中每个元素后面的'\n'
+>>> list(map(lambda x: x.strip('\n'), ['a\n','ab\n'])) 
+['a', 'ab']
+```
 Ipython
 ==============
 
@@ -422,7 +436,9 @@ data = data.replace(to_replace=r'\n|\r|\?|\t', value=' ', regex=True)
 ```python
 # 读入文件
 pd.read_csv('filename', sep=',', header=0) 
-# 注：header=0，表示第一行为标题行
+# 注：header=0，表示第一行为标题（表头）行
+# 无表头数据读取需设置 header=None；默认第一行为表头
+pd.read_csv('filename', sep=',', header=None) 
 # 将df保存到文件
 df.to_csv('filename', index=False, sep=';')
 ```
