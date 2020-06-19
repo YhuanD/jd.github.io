@@ -334,10 +334,43 @@ True
 30\. 对list使用element-wise函数
 
 ```python
-# 例：去掉list中每个元素后面的'\n'
+# 例1：去掉list中每个元素后面的'\n'
 >>> list(map(lambda x: x.strip('\n'), ['a\n','ab\n'])) 
 ['a', 'ab']
+# 例2：用字典映射列表中的元素
+>>> lst = ['a','b','c']
+>>> dic = {'a':1, 'b':2, 'c':3}
+>>> list(map(dic.get, lst))
+[1, 2, 3]
 ```
+
+31\. 打开文件读写模式：`r只能读，r+可读写，若文件不存在会报错；w只能写，w+可读写，若文件不存在则创建；a：只能写，a+可读写，若文件不存在则创建，追加写`
+
+```python
+with open(filename, 'w+', encoding='utf-8') as file:
+  for line in file:
+    print(line)
+```
+
+32\. 找出list中最大值元素的index
+
+```python
+>>> lst1
+[1, 2, 3]
+>>> lst1.index(max(lst1))
+2
+```
+
+33\. list中count某个元素的个数
+
+```python
+>>> lst = list('aabc')
+>>> lst
+['a', 'a', 'b', 'c']
+>>> lst.count('a')
+2
+```
+
 Ipython
 ==============
 
@@ -1288,6 +1321,16 @@ Out[838]: array([1, 1])
 # 按列查看
 In [839]: np.argmax(a,axis=1)
 Out[839]: array([0, 1, 0])
+```
+
+10\. numpy array to list
+
+```python
+>>> arr
+array([[1, 2, 3],
+       [4, 5, 6]])
+>>> arr.tolist()
+[[1, 2, 3], [4, 5, 6]]
 ```
 
 作图
