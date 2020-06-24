@@ -66,7 +66,7 @@ Bash
 4\. 指定分隔符（"\|"）选取第几列： 
 
 ```sh
-awk -F"|" '{print $1"|"$2"|"$4"|"}' yourfile　> newfile
+awk -F "|" '{print $1"|"$2"|"$4"|"}' yourfile　> newfile
 ```
 
 5\. 按指定列排序：
