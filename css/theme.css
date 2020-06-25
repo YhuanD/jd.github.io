@@ -71,6 +71,31 @@ body {
     font-size: 12px;
 }
 
+.tag-box {
+    list-style: none;
+    margin: 0;
+    padding: 4px 0;
+    overflow: hidden;
+    *zoom: 1;
+}
+
+.tag-box:before, .tag-box:after {
+    display: table;
+    content: "";
+    line-height: 0;
+}
+
+.tag-box:after {
+    clear: both;
+}
+
+.tag-box.inline li {
+    float: left;
+    font-size: 14px;
+    font-size: 1em;
+    line-height: 2.1;
+}
+
 .article .readmore {
 	color: #4183c4;
 }
