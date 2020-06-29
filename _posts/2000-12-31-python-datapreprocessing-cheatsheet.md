@@ -736,6 +736,18 @@ In [116]: list(df)
 Out[116]: ['col1', 'data1']
 In [117]: df.columns
 Out[117]: Index(['col1', 'data1'], dtype='object')
+# 重命名列
+>>> df
+   c1 c2
+0   1  a
+1   2  b
+2   3  c
+>>> df.columns = ['d1','d2']        
+>>> df
+   d1 d2
+0   1  a
+1   2  b
+2   3  c
 ``` 
 
 15\. 查看dataframe所有列的类型：`df.dtypes`
