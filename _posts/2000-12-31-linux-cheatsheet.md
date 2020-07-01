@@ -119,6 +119,8 @@ Vi
 
 2\. 删除空行： `:g/^$/d`
 
+3\. 修改文件编码： e.g. 转换文件编码为utf-8 `:set fileencoding=utf-8`，查看文件编码 `:set fileencoding`
+
 Conda virtual env
 ==============
 
