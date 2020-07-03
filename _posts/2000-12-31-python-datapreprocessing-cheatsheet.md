@@ -152,6 +152,9 @@ import os
 os.chdir(path)
 # 显示当前目录current working directory
 os.getcwd()
+# os.path.join连接目录
+crt_dir = os.getcwd()
+file_name = os.path.join(crt_dir, "dir_name", "filename.txt")
 ```
 
 14\. list元素变tuple类型
