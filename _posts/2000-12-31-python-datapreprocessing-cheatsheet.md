@@ -308,6 +308,10 @@ Hello, world!
 >>> p = re.compile(r'[^\u4e00-\u9fa5]', re.S) # re.S表示包括换行符 
 >>> re.sub(p,'',"sd中文df")
 '中文'
+# 保留中文和'()'
+>>> p = re.compile(r'[^\u4e00-\u9fa5()]', re.S) 
+>>> re.sub(p,'','serfg()中文')
+'()中文'
 ```
 
 27\. string中substring出现次数
