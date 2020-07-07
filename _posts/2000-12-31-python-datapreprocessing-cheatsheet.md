@@ -378,6 +378,18 @@ with open(filename, 'w+', encoding='utf-8') as file:
 2
 ```
 
+34\. 两列表交叉合并
+
+```python
+>>> lst1
+['a', 'b', 'c']
+>>> lst2
+['d', 'e', 'f']
+>>> import itertools
+>>> list(itertools.chain.from_iterable(zip(lst1,lst2)))
+['a', 'd', 'b', 'e', 'c', 'f']
+```
+
 Ipython
 ==============
 
