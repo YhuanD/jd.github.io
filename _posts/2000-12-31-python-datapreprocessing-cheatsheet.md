@@ -1050,6 +1050,12 @@ Out[530]: datetime.datetime(2016, 5, 16, 6, 40)
 # string 类型转换成timestamp类型
 In [560]: time.mktime(datetime.strptime('2016-05-16 06:40:00Z', "%Y-%m-%d %H:%M:%SZ").timetuple())
 Out[560]: 1463352000.0
+# 五年前
+>>> (datetime.datetime.now() + datetime.timedelta(days=-365*5)).strftime("%Y-%m-%d")
+'2015-07-15'
+>>> from dateutil.relativedelta import relativedelta
+>>> (datetime.datetime.now().date() - relativedelta(years=1)).strftime("%Y-%m-%d")
+'2019-07-13'
 ```
 
 27\. 重置dataframe列顺序
