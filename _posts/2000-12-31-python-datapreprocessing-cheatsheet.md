@@ -1023,6 +1023,18 @@ Out[456]:
    c1  c2
 0   0   1
 1   2   3
+# 按照某一列去重
+>>> df
+  c1  c2
+0  a   0
+1  b   1
+2  c   2
+3  a   3
+>>> df.drop_duplicates(['c1'])
+  c1  c2
+0  a   0
+1  b   1
+2  c   2
 ```
 
 26\. timestamp与date, time相互转换
