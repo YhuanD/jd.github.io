@@ -390,6 +390,13 @@ with open(filename, 'w+', encoding='utf-8') as file:
 ['a', 'd', 'b', 'e', 'c', 'f']
 ```
 
+35\. 生成固定长度的列表
+
+```python
+>>> [0]*5
+[0, 0, 0, 0, 0]
+```
+
 Ipython
 ==============
 
@@ -1065,6 +1072,7 @@ Out[560]: 1463352000.0
 # 五年前
 >>> (datetime.datetime.now() + datetime.timedelta(days=-365*5)).strftime("%Y-%m-%d")
 '2015-07-15'
+# （一）年前另一种实现方法
 >>> from dateutil.relativedelta import relativedelta
 >>> (datetime.datetime.now().date() - relativedelta(years=1)).strftime("%Y-%m-%d")
 '2019-07-13'
