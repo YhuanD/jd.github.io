@@ -51,6 +51,8 @@ sudo dpkg --list | grep nvidia-*
 
 14\. 查看ubuntu系统版本： `cat /proc/version`
 
+15\. rsync 传输文件： `rsync -e "ssh -p 端口号" user_name@域名或ip:/目录/文件名 .`
+
 Bash
 ==============
 
