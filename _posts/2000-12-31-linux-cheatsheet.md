@@ -53,6 +53,8 @@ sudo dpkg --list | grep nvidia-*
 
 15\. rsync 传输文件： `rsync -e "ssh -p 端口号" user_name@域名或ip:/目录/文件名 本地目录`
 
+16\. 每（2）秒钟查看一次gpu使用情况： `watch -n 2 nvidia-smi`
+
 Bash
 ==============
 

@@ -57,6 +57,9 @@ whereis python
 # re.search()
 >>> re.search(r'a|b','bba')
 <_sre.SRE_Match object; span=(0, 1), match='b'>
+# 取对应位置，结果与搜索关键词的先后顺序无关，与关键词在文本中出现的位置有关
+>>> re.search(r'a|b','bba').span()
+(0, 1)
 >>> re.search(r'a|b','bba').group(0) 
 'b'
 # re.findall()
