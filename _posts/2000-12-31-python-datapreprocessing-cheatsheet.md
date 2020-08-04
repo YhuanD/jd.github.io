@@ -1217,6 +1217,23 @@ Out[851]:
 2  c
 ```
 
+35\. dataframe对所有元素操作：e.g. 去掉所有元素中的空格
+
+```python
+>>> df
+      c1       c2
+0      a        0
+1      b        1
+2      c        2
+0   dre   df  dre
+>>> df.applymap((lambda x: re.sub(' ','',str(x))))
+    c1     c2
+0    a      0
+1    b      1
+2    c      2
+0  dre  dfdre
+```
+
 Numpy
 ==============
 
