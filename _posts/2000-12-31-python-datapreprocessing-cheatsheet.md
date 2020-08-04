@@ -1045,6 +1045,7 @@ Out[456]:
 0  a   0
 1  b   1
 2  c   2
+# 也可以通过keep='first' keep='last'保留第一个或最后一个 或keep=False不保留重复行
 ```
 
 26\. timestamp与date, time相互转换
