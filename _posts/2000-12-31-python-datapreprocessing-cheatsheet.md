@@ -475,6 +475,14 @@ Out[6]:
 1   2
 # inplace删除：加inplace=True
 In [7]: df.drop(df.columns[-1],axis=1,inplace=True)
+# 删除某一行, e.g.删除序号为1的行, inplace=True可用
+>>> df1
+   a  b
+0  1  2
+1  0  1
+>>> df1.drop(1,axis=0)
+   a  b
+0  1  2
 ```
 
 2\. 用range构造df
