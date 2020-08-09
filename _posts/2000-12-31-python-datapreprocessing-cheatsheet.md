@@ -57,6 +57,9 @@ whereis python
 # re.search()
 >>> re.search(r'a|b','bba')
 <_sre.SRE_Match object; span=(0, 1), match='b'>
+# 取对应位置，结果与搜索关键词的先后顺序无关，与关键词在文本中出现的位置有关
+>>> re.search(r'a|b','bba').span()
+(0, 1)
 >>> re.search(r'a|b','bba').group(0) 
 'b'
 # re.findall()
@@ -390,6 +393,13 @@ with open(filename, 'w+', encoding='utf-8') as file:
 ['a', 'd', 'b', 'e', 'c', 'f']
 ```
 
+35\. 生成固定长度的列表
+
+```python
+>>> [0]*5
+[0, 0, 0, 0, 0]
+```
+
 Ipython
 ==============
 
@@ -465,6 +475,14 @@ Out[6]:
 1   2
 # inplace删除：加inplace=True
 In [7]: df.drop(df.columns[-1],axis=1,inplace=True)
+# 删除某一行, e.g.删除序号为1的行, inplace=True可用
+>>> df1
+   a  b
+0  1  2
+1  0  1
+>>> df1.drop(1,axis=0)
+   a  b
+0  1  2
 ```
 
 2\. 用range构造df
@@ -1023,6 +1041,19 @@ Out[456]:
    c1  c2
 0   0   1
 1   2   3
+# 按照某一列去重
+>>> df
+  c1  c2
+0  a   0
+1  b   1
+2  c   2
+3  a   3
+>>> df.drop_duplicates(['c1'])
+  c1  c2
+0  a   0
+1  b   1
+2  c   2
+# 也可以通过keep='first' keep='last'保留第一个或最后一个 或keep=False不保留重复行
 ```
 
 26\. timestamp与date, time相互转换
@@ -1053,6 +1084,7 @@ Out[560]: 1463352000.0
 # 五年前
 >>> (datetime.datetime.now() + datetime.timedelta(days=-365*5)).strftime("%Y-%m-%d")
 '2015-07-15'
+# （一）年前另一种实现方法
 >>> from dateutil.relativedelta import relativedelta
 >>> (datetime.datetime.now().date() - relativedelta(years=1)).strftime("%Y-%m-%d")
 '2019-07-13'
@@ -1192,6 +1224,23 @@ Out[851]:
 0  a
 1  b
 2  c
+```
+
+35\. dataframe对所有元素操作：e.g. 去掉所有元素中的空格
+
+```python
+>>> df
+      c1       c2
+0      a        0
+1      b        1
+2      c        2
+0   dre   df  dre
+>>> df.applymap((lambda x: re.sub(' ','',str(x))))
+    c1     c2
+0    a      0
+1    b      1
+2    c      2
+0  dre  dfdre
 ```
 
 Numpy
