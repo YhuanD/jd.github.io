@@ -107,6 +107,14 @@ awk -F',' 'NR==FNR{a[$1]=$2;}NR!=FNR{print $0,a[$1]}'  OFS=',' file2.txt file1.t
 # 注：OFS为指定输出分隔符 
 ```
 
+10\. 服务器和本地文件传输
+
+```sh
+# 从服务器下载到本地
+rsync -e 'ssh -p 端口号' 用户名@serverXX.com:/目录/文件.txt .
+
+```
+
 pip
 ==============
 
