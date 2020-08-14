@@ -144,6 +144,8 @@ Conda virtual env
 
 3\. 进入虚拟环境： `source activate env_name`
 
+4\. conda create -n xxxx python=3.7   //创建python3.7的xxxx虚拟环境
+
 Docker
 ==============
 
