@@ -166,8 +166,8 @@ Mysql
 2\. 为表格添加列
 
 ```sql
-# 在jcol后添加一列icol
+-- 在jcol后添加一列icol
 ALTER TABLE tbl_name ADD icol INT AFTER jcol;
-# 把icol添加到第一列
+-- 把icol添加到第一列
 ALTER TABLE tbl_name ADD icol INT FIRST;
 ```
