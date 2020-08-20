@@ -158,3 +158,8 @@ Docker
 4\. 进入docker： `docker exec -it docker_name bash`
 
 5\. 查看docker镜像列表： `docker image ls`
+
+Mysql
+==============
+
+1\. 清空表格： `truncate tbl;`
