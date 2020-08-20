@@ -112,7 +112,6 @@ awk -F',' 'NR==FNR{a[$1]=$2;}NR!=FNR{print $0,a[$1]}'  OFS=',' file2.txt file1.t
 ```sh
 # 从服务器下载到本地
 rsync -e 'ssh -p 端口号' 用户名@serverXX.com:/目录/文件.txt .
-
 ```
 
 pip
@@ -133,7 +132,7 @@ Vi
 
 3\. 修改文件编码： e.g. 转换文件编码为utf-8 `:set fileencoding=utf-8`，查看文件编码 `:set fileencoding`
 
-4\. 跳转到倒数第n行： shift+g到最后一行，:-n跳转到倒数第n行
+4\. 跳转到倒数第n行： `shift+g`到最后一行，`:-n`跳转到倒数第n行
 
 Conda virtual env
 ==============
@@ -162,4 +161,13 @@ Docker
 Mysql
 ==============
 
-1\. 清空表格： `truncate tbl;`
+1\. 清空表格： `TRUNCATE tbl`
+
+2\. 为表格添加列
+
+```sql
+# 在jcol后添加一列icol
+ALTER TABLE tbl_name ADD icol INT AFTER jcol;
+# 把icol添加到第一列
+ALTER TABLE tbl_name ADD icol INT FIRST;
+```
