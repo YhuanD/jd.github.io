@@ -161,7 +161,7 @@ Docker
 Mysql
 ==============
 
-1\. 清空表格： `TRUNCATE tbl`
+1\. 清空表格： `TRUNCATE tbl;`
 
 2\. 为表格添加列
 
