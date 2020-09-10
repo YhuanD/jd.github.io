@@ -503,6 +503,8 @@ Out[20]:
 data.replace(';', ',', inplace=True)
 # 例2： 正则替换
 data = data.replace(to_replace=r'\n|\r|\?|\t', value=' ', regex=True)
+# 例3： 数字替换
+data.replace(0.000, 0.001, inplace=True)
 ```
 
 4\. 读入/输出文件
@@ -1241,6 +1243,44 @@ Out[851]:
 1    b      1
 2    c      2
 0  dre  dfdre
+```
+
+36\. dataframe Series to list:
+
+```python
+>>> df
+  c1  c2
+0  a   0
+1  b   1
+2  c   2
+>>> df['c1'].to_list()
+['a', 'b', 'c']
+```
+
+37\. 读取mysql数据到dataframe
+
+```python
+from sqlalchemy import create_engine
+db_conn_str = 'mysql+pymysql://用户名:密码@服务器ip:端口号/db名称'
+db_conn = create_engine(db_conn_str)
+sql = '''
+    SELECT *
+    FROM tb_nme
+    '''
+df = pd.read_sql(sql, con=db_conn)
+```
+
+38\. dataframe转换成json
+
+```python
+>>> df
+  c1  c2
+0  a   0
+1  b   1
+2  c   2
+# 转换成records形式
+>>> df.to_json(orient='records')
+'[{"c1":"a","c2":0},{"c1":"b","c2":1},{"c1":"c","c2":2}]'
 ```
 
 Numpy

@@ -47,13 +47,15 @@ sudo dpkg --list | grep nvidia-*
 
 12\. 查看文件编码格式： `file file_name`
 
-13\. nohup后台运行程序： `nohup python myscript.py &> out.log &`， 查看python进程： `ps aux|grep python` ，停止进程： `kill -num`
+13\. nohup后台运行程序： `nohup python myscript.py &> out.log &`， 查看python进程： `ps aux|grep python` ，停止进程： `kill num`， 强制停止： `kill -9 num`
 
 14\. 查看ubuntu系统版本： `cat /proc/version`
 
 15\. rsync 传输文件： `rsync -e "ssh -p 端口号" user_name@域名或ip:/目录/文件名 本地目录`
 
 16\. 每（1）秒钟查看一次gpu使用情况： `watch -n 1 nvidia-smi`
+
+17\. 在当前目录及子目录下查找文件： e.g. `find . -name \*.xlsx` （注：查找以xlsx结尾的文件，"\*"前需要加"\"转义）
 
 Bash
 ==============
@@ -139,7 +141,7 @@ Conda virtual env
 
 1\. 查看已安装的虚拟环境： `conda env list`
 
-2\. 查看已安装的模块： `conda list`
+2\. 查看已安装的模块： `conda list`，可通过linux管道"|"查询关键词, e.g. `conda list | grep tensorflow`
 
 3\. 进入虚拟环境： `source activate env_name`
 
@@ -170,4 +172,20 @@ Mysql
 ALTER TABLE tbl_name ADD icol INT AFTER jcol;
 -- 把icol添加到第一列
 ALTER TABLE tbl_name ADD icol INT FIRST;
+```
+
+3\. 建表
+
+```sql
+-- e.g.
+create table tbl_name(col1 char(6) not null, col2 char(20), col3 date);
+```
+
+4\. 远程登陆mysql
+
+```shell
+<!-- mysql -h 服务器ip -u 用户名 -p -P 端口号 -->
+<!-- 注：-P 端口号可省略 -->
+mysql -h 服务器ip -u root -p -P 端口号
+<!-- 回车输入密码 -->
 ```
