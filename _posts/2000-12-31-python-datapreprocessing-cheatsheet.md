@@ -400,6 +400,16 @@ with open(filename, 'w+', encoding='utf-8') as file:
 [0, 0, 0, 0, 0]
 ```
 
+36\. string格式的list转换成list
+
+```python
+import json
+>>> lst
+'[{"c1":"a","c2":0}]'
+>>> json.loads(lst)
+[{'c1': 'a', 'c2': 0}]
+```
+
 Ipython
 ==============
 
@@ -1281,6 +1291,60 @@ df = pd.read_sql(sql, con=db_conn)
 # 转换成records形式
 >>> df.to_json(orient='records')
 '[{"c1":"a","c2":0},{"c1":"b","c2":1},{"c1":"c","c2":2}]'
+```
+
+39\. 创建空表指定列名
+
+```python
+df = pd.DataFrame(columns=['c1', 'c2', 'c3'])
+```
+
+40\. 将多列合并成列表
+
+```python
+>>> df
+        c1       c2
+0        a        0
+1        b        1
+2        c        2
+>>> df['c3'] = df.values.tolist()
+>>> df
+        c1       c2                  c3
+0        a        0              [a, 0]
+1        b        1              [b, 1]
+2        c        2              [c, 2]
+```
+
+41\. dataframe展开成透视表
+
+```python
+>>> df1
+   c1 c2  c3
+0  aa  a   0
+1  aa  b   1
+2  bb  b   2
+3  bb  a   3
+4  cc  c   4
+>>> df1.set_index(['c1','c2'])
+       c3
+c1 c2    
+aa a    0
+   b    1
+bb b    2
+   a    3
+cc c    4
+>>> df1.unstack('c1')['c3']
+c1   aa   bb   cc
+c2               
+a   0.0  3.0  NaN
+b   1.0  2.0  NaN
+c   NaN  NaN  4.0
+>>> df1.unstack('c2')['c3']
+c2    a    b    c
+c1               
+aa  0.0  1.0  NaN
+bb  3.0  2.0  NaN
+cc  NaN  NaN  4.0
 ```
 
 Numpy
