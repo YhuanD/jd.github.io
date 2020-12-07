@@ -90,6 +90,10 @@ whereis python
 >>> import datetime
 >>> datetime.date.today().strftime("%Y%m%d")
 '20200604'
+>>> datetime.date.today()
+datetime.date(2020, 9, 22)
+>>> str(datetime.date.today())
+'2020-09-22'
 ```
 
 7\. list多重赋值
@@ -158,6 +162,10 @@ os.getcwd()
 # os.path.join连接目录
 crt_dir = os.getcwd()
 file_name = os.path.join(crt_dir, "dir_name", "filename.txt")
+# 查看当前目录下的子目录
+dir_lst = os.listdir(os.getcwd())
+# 当前目录下子目录数量
+print(len(dir_lst))
 ```
 
 14\. list元素变tuple类型
