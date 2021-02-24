@@ -116,6 +116,20 @@ awk -F',' 'NR==FNR{a[$1]=$2;}NR!=FNR{print $0,a[$1]}'  OFS=',' file2.txt file1.t
 rsync -e 'ssh -p 端口号' 用户名@serverXX.com:/目录/文件.txt .
 ```
 
+11\. 用shell脚本一键自定义初始环境
+
+```sh
+# 例如：
+# 写入env.sh文件如下内容：
+# cd /home/dir
+# source ~/.bashrc
+# conda activate anevn
+# 将env.sh变成执行文件
+chmod +x env.sh
+# 一键运行
+source evn.sh
+```
+
 pip
 ==============
 
