@@ -150,6 +150,8 @@ Vi
 
 4\. 跳转到倒数第n行： `shift+g`到最后一行，`:-n`跳转到倒数第n行
 
+5\. 查找某个关键词出现次数： `:%s/key_word//gn`
+
 Conda virtual env
 ==============
 
@@ -203,3 +205,57 @@ create table tbl_name(col1 char(6) not null, col2 char(20), col3 date);
 mysql -h 服务器ip -u root -p -P 端口号
 <!-- 回车输入密码 -->
 ```
+
+MongoDB
+==============
+
+1\. 模糊查询
+ 
+```mongodb
+"col_name" => array('$regex'=> 'keyword_1|keyword_2')
+```
+
+2\. 某个col值不为空
+ 
+```mongodb
+"col_name" => array('$ne' => NULL)
+```
+
+3\. 逻辑与（e.g.col_name不为'NULL'且不为0）, 逻辑或(and换成or)
+ 
+```mongodb
+'$and' => array(
+    array("col_name" => array('$ne' => NULL)),
+    array("col_name" => array('$ne' => 0)),
+    )
+```
+
+4\. 某列是否存在
+ 
+```mongodb
+'col_name'=>array('$exists'=>true)
+```
+
+5\. 某列是否存在
+ 
+```mongodb
+'col_name'=>array('$exists'=>true)
+```
+
+6\. 范围限制：
+greater than (i.e. >, gt); 
+greater than or equal to (i.e. >=, gte); 
+less than (i.e. <, lt);
+less than or equal to (i.e. <, lte);
+
+```mongodb
+'col_date' => array('$gt'=>'2019-01-01')
+```
+
+
+文本编辑器
+==============
+
+1\.sublime text3 折叠快捷键：
+按ctrl + k，然后按ctrl + 1，可收起所有函数
+按ctrl + k， 再按 ctrl + j 显示所有函数
