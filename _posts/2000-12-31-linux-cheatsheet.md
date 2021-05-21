@@ -163,6 +163,8 @@ Conda virtual env
 
 4\. conda create -n xxxx python=3.7   //创建python3.7的xxxx虚拟环境
 
+5\. conda env remove -n xxx
+//删除xxx环境
 Docker
 ==============
 
@@ -236,13 +238,7 @@ MongoDB
 'col_name'=>array('$exists'=>true)
 ```
 
-5\. 某列是否存在
- 
-```mongodb
-'col_name'=>array('$exists'=>true)
-```
-
-6\. 范围限制：
+5\. 范围限制：
 greater than (i.e. >, gt); 
 greater than or equal to (i.e. >=, gte); 
 less than (i.e. <, lt);

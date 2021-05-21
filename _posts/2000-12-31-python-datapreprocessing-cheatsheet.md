@@ -408,14 +408,19 @@ with open(filename, 'w+', encoding='utf-8') as file:
 [0, 0, 0, 0, 0]
 ```
 
-36\. string格式的list转换成list
+36\. string格式的list转换成list（或string to dict）
 
 ```python
 import json
+# string to list
 >>> lst
 '[{"c1":"a","c2":0}]'
 >>> json.loads(lst)
 [{'c1': 'a', 'c2': 0}]
+# string to dict
+>>> a_str = '{"c1" : 1, "c2" : 2}' 
+>>> json.loads(a_str)
+{'c1': 1, 'c2': 2}
 ```
 
 Ipython
