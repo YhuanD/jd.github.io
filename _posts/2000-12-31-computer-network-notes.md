@@ -18,13 +18,17 @@ categories: computer network
 
 网络（Network）
 ： 由若干节点（Node）和连接这些节点的链路（Link）组成。
+
 互连网（互连网）
 ： 多个网络由路由器互连起来，形成的覆盖范围更大的网络。互联网是“网络的网络”（Network of Networks）。
+
 因特网（Internet）
 ： 是世界上最大的互连网络。
-*internet vs Internet：
-internet是通用名词，泛指由多个计算机互连而成的网络。这些网络之间的通信协议可以是任意的。
-Internet是专有名词，指全球最大的、开放的、由众多网络相互连接而成的特定计算机网络，采用TCP/IP协议簇作为通信规则。
+
+*internet vs Internet
+
+- internet是通用名词，泛指由多个计算机互连而成的网络。这些网络之间的通信协议可以是任意的。
+- Internet是专有名词，指全球最大的、开放的、由众多网络相互连接而成的特定计算机网络，采用TCP/IP协议簇作为通信规则。
 
 2\. 因特网服务提供者ISP(Internet Service Provider)
 
