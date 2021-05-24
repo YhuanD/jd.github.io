@@ -11,10 +11,9 @@ categories: computer network
 * TOC
 {:toc}
 
-因特网概述
-==============
+#因特网概述
 
-# 网络、互连网（互联网）、因特网的基本概念
+## 网络、互连网（互联网）、因特网的基本概念
 
 网络（Network）
 : 由若干节点（Node）和连接这些节点的链路（Link）组成。
@@ -29,7 +28,7 @@ categories: computer network
 - internet是通用名词，泛指由多个计算机互连而成的网络。这些网络之间的通信协议可以是任意的。
 - Internet是专有名词，指全球最大的、开放的、由众多网络相互连接而成的特定计算机网络，采用TCP/IP协议簇作为通信规则。
 
-# 因特网服务提供者ISP(Internet Service Provider)
+## 因特网服务提供者ISP(Internet Service Provider)
 
 普通用户通过ISP接入因特网。
 ISP从因特网管理机构申请成块的IP地址，同时具有通信线路及路由器等设备。任何机构和个人向ISP交纳费用可以得到所需IP地址。因特网上的主机必须有IP地址才能通信。
