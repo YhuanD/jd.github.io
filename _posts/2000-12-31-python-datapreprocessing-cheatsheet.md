@@ -423,6 +423,21 @@ import json
 {'c1': 1, 'c2': 2}
 ```
 
+37\. 计算运行速度
+
+```python
+from timeit import timeit
+# string to list
+>>> lst
+'[{"c1":"a","c2":0}]'
+>>> json.loads(lst)
+[{'c1': 'a', 'c2': 0}]
+# string to dict
+>>> a_str = '{"c1" : 1, "c2" : 2}' 
+>>> json.loads(a_str)
+{'c1': 1, 'c2': 2}
+```
+
 Ipython
 ==============
 
@@ -528,6 +543,19 @@ data.replace(';', ',', inplace=True)
 data = data.replace(to_replace=r'\n|\r|\?|\t', value=' ', regex=True)
 # 例3： 数字替换
 data.replace(0.000, 0.001, inplace=True)
+# 例4： 对某一列用字典替换，可用inplace=True
+>>> df = pd.DataFrame({'col2': {0: 'a', 1: 2, 2: np.nan}, 'col1': {0: 'w', 1: 1, 2: 2}})
+>>> di = {1: "A", 2: "B"}
+>>> df
+  col1 col2
+0    w    a
+1    1    2
+2    2  NaN
+>>> df.replace({"col1": di})
+  col1 col2
+0    w    a
+1    A    2
+2    B  NaN
 ```
 
 4\. 读入/输出文件
@@ -602,6 +630,13 @@ In [576]: df[df.col2 > 1]
 Out[576]:
   col1  col2
 2    c     2
+
+# 判断一列的值是否在一个列表中
+>>> df[df.col1.isin(['ab','de'])]
+  col1  col2
+0   ab     1
+3   de     4
+
 ```
 
 8\. 填充np.nan处： .fillna() ## inplace=True可用
@@ -736,6 +771,11 @@ z    c    f
   col1  col2
 0    a   1.0
 2    c   NaN
+# 只查看其中的某些列是否为nan
+>>> df.dropna(subset=['col1', 'col3'])
+  col1  col2  col3
+0    a   1.0     4
+2    c   NaN     6
 ```
 
 12\. 更改某列位置
