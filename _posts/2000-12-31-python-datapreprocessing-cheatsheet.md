@@ -438,6 +438,18 @@ from timeit import timeit
 {'c1': 1, 'c2': 2}
 ```
 
+38\. 创建特定value类型的dict
+
+```python
+>>> from collections import defaultdict
+>>> d = defaultdict(list)
+>>> d
+defaultdict(<class 'list'>, {})
+>>> d['a'].append(1)
+>>> d
+defaultdict(<class 'list'>, {'a': [1]})
+```
+
 Ipython
 ==============
 
