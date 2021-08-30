@@ -49,7 +49,7 @@ sudo dpkg --list | grep nvidia-*
 
 13\. nohup后台运行程序： `nohup python myscript.py &> out.log &`， 查看python进程： `ps aux|grep python` ，停止进程： `kill num`， 强制停止： `kill -9 num`
 
-14\. 查看ubuntu系统版本： `cat /proc/version`
+14\. 查看ubuntu系统版本： `cat /proc/version`； centos：lsb_release -a
 
 15\. rsync 传输文件： `rsync -e "ssh -p 端口号" user_name@域名或ip:/目录/文件名 本地目录`
 
