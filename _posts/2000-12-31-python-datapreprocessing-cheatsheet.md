@@ -450,6 +450,26 @@ defaultdict(<class 'list'>, {})
 defaultdict(<class 'list'>, {'a': [1]})
 ```
 
+39\. set添加item
+
+```python
+>>> s = set()
+>>> s.add(1)
+>>> s
+{1}
+>>> s.update({2,3,1})
+>>> s
+{1, 2, 3}
+```
+
+40\. 找到list中长度最大的item
+
+```python
+>>> mylist = ['123','123456','1234']
+>>> max(mylist, key=len)
+'123456'
+```
+
 Ipython
 ==============
 

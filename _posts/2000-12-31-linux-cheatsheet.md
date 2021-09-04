@@ -16,7 +16,7 @@ Ubuntu basics
 
 1\. 查看磁盘空间： `df -h`
 
-2\. 查看当前文件夹中文件磁盘空间占用： `du -sh *`
+2\. 查看当前文件夹中文件磁盘空间占用： `du -h *`
 
 3\. 查看ip： `ip addr`
 
@@ -56,6 +56,8 @@ sudo dpkg --list | grep nvidia-*
 16\. 每（1）秒钟查看一次gpu使用情况： `watch -n 1 nvidia-smi`
 
 17\. 在当前目录及子目录下查找文件： e.g. `find . -name \*.xlsx` （注：查找以xlsx结尾的文件，"\*"前需要加"\"转义）
+
+18\. 性能分析： top
 
 Bash
 ==============
